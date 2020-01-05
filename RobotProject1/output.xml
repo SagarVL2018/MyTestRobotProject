@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200105 19:46:28.642" rpa="false">
+<suite id="s1" name="TestSuite1" source="D:\SagarWork\Eclipse2019\RobotProject1\tests\TestSuite1.robot">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am in Suite SetUP</arg>
+</arguments>
+<msg timestamp="20200105 19:46:28.871" level="INFO">I am in Suite SetUP</msg>
+<status status="PASS" starttime="20200105 19:46:28.871" endtime="20200105 19:46:28.871"></status>
+</kw>
+<test id="s1-t1" name="MyFirstSeleniumTestCase">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am in Test SetUP</arg>
+</arguments>
+<msg timestamp="20200105 19:46:28.873" level="INFO">I am in Test SetUP</msg>
+<status status="PASS" starttime="20200105 19:46:28.872" endtime="20200105 19:46:28.873"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://google.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200105 19:46:28.874" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<status status="PASS" starttime="20200105 19:46:28.873" endtime="20200105 19:46:32.751"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200105 19:46:32.752" endtime="20200105 19:46:32.757"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>Automation step by step</arg>
+</arguments>
+<msg timestamp="20200105 19:46:32.758" level="INFO">Typing text 'Automation step by step' into text field 'name=q'.</msg>
+<status status="PASS" starttime="20200105 19:46:32.758" endtime="20200105 19:46:33.050"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200105 19:46:33.051" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg timestamp="20200105 19:46:33.061" level="INFO">Pressing special key ENTER to element.</msg>
+<status status="PASS" starttime="20200105 19:46:33.050" endtime="20200105 19:46:35.568"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200105 19:46:35.569" endtime="20200105 19:46:37.695"></status>
+</kw>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am in Test TearDown</arg>
+</arguments>
+<msg timestamp="20200105 19:46:37.697" level="INFO">I am in Test TearDown</msg>
+<status status="PASS" starttime="20200105 19:46:37.697" endtime="20200105 19:46:37.698"></status>
+</kw>
+<status status="PASS" starttime="20200105 19:46:28.871" endtime="20200105 19:46:37.699" critical="yes"></status>
+</test>
+<kw name="Log" library="BuiltIn" type="teardown">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am in Suite TearDown</arg>
+</arguments>
+<msg timestamp="20200105 19:46:37.704" level="INFO">I am in Suite TearDown</msg>
+<status status="PASS" starttime="20200105 19:46:37.703" endtime="20200105 19:46:37.704"></status>
+</kw>
+<status status="PASS" starttime="20200105 19:46:28.645" endtime="20200105 19:46:37.704"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestSuite1">TestSuite1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
