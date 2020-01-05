@@ -7,6 +7,21 @@ Test Teardown    Log    I am in Test TearDown
 Suite Setup    Log    I am in Suite SetUP    
 Suite Teardown    Log    I am in Suite TearDown           
 
+*** Variables ***
+${URL}            https://opensource-demo.orangehrmlive.com/
+${Browser}        chrome
+@{Login}          Admin    admin123
+&{Credentials}    username=Admin    password=admin123  
+
+
+*** Keywords ***
+LoginKW
+    Input Text        id=txtUsername    @{Login}[0]    
+    Input Password    id=txtPassword    &{Credentials}[password] 
+    Click Button      id=btnLogin
+
+
+
 *** Test Cases ***
 MyFirstTestCase
     Log    Hello World!    
@@ -45,15 +60,5 @@ Sample_Login_Test_With_Variables
     Close Browser
     Log               Login successful, Login test was executed by %{username} and %{os}    
 
-*** Variables ***
-${URL}            https://opensource-demo.orangehrmlive.com/
-${Browser}        chrome
-@{Login}          Admin    admin123
-&{Credentials}    username=Admin    password=admin123  
 
 
-*** Keywords ***
-LoginKW
-    Input Text        id=txtUsername    @{Login}[0]    
-    Input Password    id=txtPassword    &{Credentials}[password] 
-    Click Button      id=btnLogin
